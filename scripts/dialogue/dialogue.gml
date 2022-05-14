@@ -1,7 +1,6 @@
 ///@desc NineSliceBoxStretched(sprite, x1, y1, x2, y2, index)
 function NineSliceBoxStretched(sprite,x1,y1,x2,y2,index)
 {
-console_log("NSBS start");
 var _size = sprite_get_width(sprite) / 3;
 var _w = x2 - x1;
 var _h = y2 - y1;
@@ -28,4 +27,23 @@ draw_sprite_part_ext(sprite, index, _size * 2, _size, _size, 1, x1 + _w - _size,
 draw_sprite_part_ext(sprite, index, _size, 0, 1, _size, x1 + _size, y1, _w - (_size * 2), 1, c_white, 1);
 //BOTTOM
 draw_sprite_part_ext(sprite, index, _size, _size * 2, 1, _size, x1 + _size, y1 + _h - (_size), _w - (_size * 2), 1, c_white,1);
+}
+
+function NewTextBox(){
+	var _obj;
+	if(instance_exists(o_Text)) _obj = o_TextQueued; else _obj = o_Text;
+	with (instance_create_layer(0,0,"Instances",_obj)){
+		text_Message = argument[0];
+		if(instance_exists(other)) originInstance = other.id else originInstance = noone;
+		if(argument_count > 1) background = argument[1]; else background = 1;
+	}
+	
+	with (o_Player)
+	{
+		if (state != PlayerStateLocked)
+		{
+			lastState = state;
+			state = PlayerStateLocked;
+		}
+	}
 }

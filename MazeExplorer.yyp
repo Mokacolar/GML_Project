@@ -19,6 +19,7 @@
     {"id":{"name":"o_Player","path":"objects/o_Player/o_Player.yy",},"order":0,},
     {"id":{"name":"fText","path":"fonts/fText/fText.yy",},"order":0,},
     {"id":{"name":"r_Init","path":"rooms/r_Init/r_Init.yy",},"order":3,},
+    {"id":{"name":"o_TextQueued","path":"objects/o_TextQueued/o_TextQueued.yy",},"order":3,},
     {"id":{"name":"state_Player","path":"scripts/state_Player/state_Player.yy",},"order":3,},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},"order":15,},
     {"id":{"name":"o_Game","path":"objects/o_Game/o_Game.yy",},"order":1,},

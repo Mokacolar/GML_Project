@@ -16,5 +16,3 @@ x2_Target = 640;
 lerpProgress = 0;
 textProgress = 0;
 
-text_Message = "Default message text";
-background = 1;
